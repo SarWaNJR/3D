@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/assets/css/Style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="box">
+        <span style="--i: 1"><img src="/assets/img/new_0.jpg" alt="" /></span>
+        <span style="--i: 2"
+          ><img src="/assets/img/profile-pic-4.jpg" alt=""
+        /></span>
+        <span style="--i: 3"
+          ><img src="/assets/img/2.jpg" alt="" class="imgs"
+        /></span>
+        <span style="--i: 4"
+          ><img src="/assets/img/new_3.jpg" alt="" class="imgs"
+        /></span>
+        <span style="--i: 5"
+          ><img src="/assets/img/new_4.jpg" alt="" class="imgs"
+        /></span>
+        <span style="--i: 6"
+          ><img src="/assets/img/new_5.jpg" alt="" class="imgs"
+        /></span>
+        <span style="--i: 7"
+          ><img src="/assets/img/new_6.jpg" alt="" class="imgs"
+        /></span>
+        <span style="--i: 8"
+          ><img src="/assets/img/new_7.jpg" alt="" class="imgs"
+        /></span>
+        <span style="--i: 9"
+          ><img src="/assets/img/new_8.jpg" alt="" class="imgs"
+        /></span>
+        <span style="--i: 10"
+          ><img src="/assets/img/mia-malkova-naked-5646.jpg" alt=""
+        /></span>
+      </div>
+      <div class="btns">
+        <div class="btn prev"></div>
+        <div class="btn next"></div>
+      </div>
+    </div>
+    <!-- JAVASCRIPT -->
+    <script>
+      let PrevBtn = document.querySelector(".prev");
+      let NextBtn = document.querySelector(".next");
+      let Box = document.querySelector(".box");
+      let $Images = document.querySelectorAll(".imgs");
+
+      let Degrees = 0;
+      PrevBtn.addEventListener("click", function () {
+        Degrees += 45;
+        Box.style = `transform: perspective(1000px) rotateY(${Degrees}deg);`;
+      });
+
+      NextBtn.addEventListener("click", function () {
+        Degrees -= 45;
+        Box.style = `transform: perspective(1000px) rotateY(${Degrees}deg);`;
+      });
+    </script>
+  </body>
+</html>
+<!-- 
+ $Images.forEach((value) => {
+            return (value.style.border = "5px solid gold");
+          }); -->
